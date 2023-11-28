@@ -19,9 +19,6 @@ combined_df = pd.merge(movies_df, ratings_df, on='movieId')
 # Display the first few rows of the merged dataframe
 print(combined_df.head())
 
-# save the CSV (path)
-output_path = '/Users/wxuan/Downloads/ml-latest-small/combined_data.csv'
+print(combined_df.info())
 
-# Save the DataFrame to a CSV file
-combined_df.to_csv(output_path, index=False)
 
