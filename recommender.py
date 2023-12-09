@@ -68,8 +68,11 @@ def main():
             recommendations_with_scores = recommend_movies_with_scores(user_input)
             if recommendations_with_scores:
                 print("\nRecommended movies: (The number is the similarity score to the movie you entered)")
+                totalscore = 0
                 for movie, score in recommendations_with_scores:
                     print(f"{movie}: {score:.3f}")
+                    totalscore+=score
+                print(f"Similarity Score Accuracy: {round((totalscore/10)*100)}%")
             else:
                 print("No recommendations found.")
         except KeyError:
