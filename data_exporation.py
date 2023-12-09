@@ -21,4 +21,5 @@ print(combined_df.head())
 
 print(combined_df.info())
 
+print(combined_df.shape)
 
